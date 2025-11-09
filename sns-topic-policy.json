@@ -1,0 +1,21 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Principal": {
+          "Service": "s3.amazonaws.com"
+        },
+        "Action": "SNS:Publish",
+        "Resource": "arn:aws:sns:us-east-1:464134132296:image-processing-topic",
+        "Condition": {
+          "StringEquals": {
+            "aws:SourceAccount": "464134132296"
+          },
+          "ArnLike": {
+            "aws:SourceArn": "arn:aws:s3:::dep124-assignment3"
+          }
+        }
+      }
+    ]
+  }

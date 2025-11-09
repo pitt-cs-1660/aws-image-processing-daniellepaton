@@ -9,7 +9,9 @@ RUN uv sync
 
 COPY handler.py ${LAMBDA_TASK_ROOT}
 
-ENV PYTHONPATH=${LAMBDA_TASK_ROOT}:${PYTHONPATH}
+ENV VIRTUAL_ENV=${LAMBDA_TASK_ROOT}/.venv
+ENV PATH=${VIRTUAL_ENV}/bin:${PATH}
+ENV PYTHONPATH=${LAMBDA_TASK_ROOT}:${VIRTUAL_ENV}/lib/python3.13/site-packages
 
 CMD ["handler.greyscale_handler"]
 

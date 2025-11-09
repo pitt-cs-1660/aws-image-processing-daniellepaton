@@ -1,0 +1,18 @@
+{
+  "Records": [
+    {
+      "EventSource": "aws:sns",
+      "EventVersion": "1.0",
+      "EventSubscriptionArn": "arn:aws:sns:us-east-1:464134132296:image-processing-topic:placeholder",
+      "Sns": {
+        "Type": "Notification",
+        "MessageId": "00000000-1111-2222-3333-444444444444",
+        "TopicArn": "arn:aws:sns:us-east-1:464134132296:image-processing-topic",
+        "Subject": "Amazon S3 Notification",
+        "Message": "{\"Records\":[{\"eventVersion\":\"2.1\",\"eventSource\":\"aws:s3\",\"awsRegion\":\"us-east-1\",\"eventTime\":\"2025-11-09T22:45:00.000Z\",\"eventName\":\"ObjectCreated:Put\",\"s3\":{\"s3SchemaVersion\":\"1.0\",\"configurationId\":\"manual-test\",\"bucket\":{\"name\":\"dep124-assignment3\",\"arn\":\"arn:aws:s3:::dep124-assignment3\"},\"object\":{\"key\":\"greyscale/test-image.jpg\",\"size\":1024}}}]}",
+        "Timestamp": "2025-11-09T22:45:00.000Z"
+      }
+    }
+  ]
+}
+
